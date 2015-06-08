@@ -1,3 +1,43 @@
 
 
-<h1>test</h1>
+<h1>Bustle Clone!</h1>
+
+<div class="row">
+
+  <!-- <button class="btn btn-danger" {{action: 'previousPicture'}}>Previous</button> -->
+  <button class="btn btn-danger" {{action 'nextPicture' -1}}>Previous</button>
+  <img {{ bind-attr src=currentPicture }} />
+  <button class="btn btn-danger" {{action 'nextPicture' 1}}>Next</button>
+</div>
+
+<div class="row">
+  {{#link-to 'story1'}}
+    <div class="col-md-6">
+      <h4>Lindsey Graham</h4>
+      <img src="http://lovelace-media.imgix.net/getty/465512236.jpg?w=373&h=280&fit=crop&crop=faces&q=70" alt="Lindsey Graham doing stuff" />
+    </div>
+  {{/link-to}}
+
+  {{#link-to 'story2'}}
+  <div class="col-md-6">
+    <h4>Kim and Kanye</h4>
+    <img src="http://lovelace-media.imgix.net/getty/453687409.jpg?w=373&h=280&fit=crop&crop=faces&q=70" alt="Kim and Kanye" />
+  </div>
+  {{/link-to}}
+</div>
+
+<div class="row">
+  {{#link-to 'story3'}}
+      <div class="col-md-6">
+      <h3>A fence</h3>
+      <img src="http://lovelace-media.imgix.net/getty/469054278.jpg?w=373&h=280&fit=crop&crop=faces&q=70" alt="A fence" />
+    </div>
+  {{/link-to}}
+
+  {{#link-to 'story4'}}
+    <div class="col-md-6">
+      <h3>Ryan Gosling</h3>
+      <img src="http://lovelace-media.imgix.net/getty/492466685.jpg?w=373&h=280&fit=crop&crop=faces&q=70" alt="Ryan Gosling" />
+    </div>
+  {{/link-to}}
+</div>

@@ -1,0 +1,20 @@
+<div class="container">
+  <nav class="navbar navbar-default" role="navigation">
+    <ul class="nav navbar-nav">
+      <li>{{#link-to 'about'}}About{{/link-to}}</li>
+      <li>{{#link-to 'story1'}}Lindsey Graham{{/link-to}}</li>
+      <li>{{#link-to 'story2'}}Kim and Kanye{{/link-to}}</li>
+      <li>{{#link-to 'story3'}}A Fence{{/link-to}}</li>
+      <li>{{#link-to 'story4'}}Ryan Gosling{{/link-to}}</li>
+      <!-- <li>{{#view 'application'}}Social{{/view}}</li> -->
+      <li{{action 'toggleSocialOn' on='mouseEnter'}}><span {{action 'toggleSocialOff' on='mouseLeave'}}>Social</span></li>
+
+    </ul>
+  </nav>
+    {{#if isSocialShowing}}
+      <p> Social media links </p>
+    {{/if}}
+  <!-- {{#view 'application'}}
+  {{/view}} -->
+  {{outlet}}
+</div>
